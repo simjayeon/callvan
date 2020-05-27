@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f8dd43"
+            android:onClick="Clickback"
+            android:text="뒤로가기" />
+
+        <Button
+            android:id="@+id/recall"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_above="@+id/gomain"
+            android:layout_centerHorizontal="true"
+            android:background="@color/s_bg"
+            android:onClick="Recall"
+            android:text="다시 부르기"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/gomain"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="204dp"
+            android:background="@color/s_bg"
+            android:onClick="Gomain"
+            android:text="메인으로"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/failmsg"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_above="@id/recall"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="302dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="60dp"
+            android:text="탑승 가능한 콜벤이 없어요"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="278dp"
+            android:layout_height="231dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/failimg" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
